@@ -1,0 +1,76 @@
+@import "base";
+@import "layout";
+@import "components";
+
+
+// .grid-container{
+//     display: grid;
+//     grid-template-columns: repeat(3, 1fr) 150px;
+//     grid-template-rows: 100px 1fr 2fr 100px;
+//     font-size: 3rem;
+//     color: aliceblue;
+//     width: 120rem;
+//     margin: 0 auto;
+//     gap: 1rem;
+//     & > *{
+//         background-color: aqua;
+//         padding: 2rem;
+//     }
+// }
+
+
+// .grid-header{
+//     grid-column: 1 / -1;
+
+// }
+// .small-box{
+
+// }
+// .sidebar{
+//     grid-row: 2 / span 2;
+//     grid-column: 4 /-1;
+// }
+// .maincontent{
+//     grid-column: 1/ span 3;
+// }
+// .footer{
+//     grid-column: 1 / -1;
+// }
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 150px;
+    grid-template-rows: 100px 1fr 2fr 100px;
+    grid-template-areas: "head head head head"
+                         "box box box side"
+                         "main main main side"
+                         "foot foot foot foot";
+    font-size: 3rem;
+    color: aliceblue;
+    width: 120rem;
+    margin: 0 auto;
+    grid-auto-rows: 300px;
+    gap: 1rem;
+    & > *{
+        background-color: aqua;
+        padding: 2rem;
+    }
+}
+
+
+.grid-header{
+    grid-area: head;
+
+}
+.small-box{
+   
+}
+.sidebar{
+    grid-area: side;
+}
+.maincontent{
+    grid-area: main;
+}
+.footer{
+    grid-area: foot;
+}
